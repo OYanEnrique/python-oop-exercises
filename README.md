@@ -29,6 +29,21 @@ Exercício introdutório sobre classes e objetos em Python. Demonstra:
 - Métodos com lógica condicional
 - Instanciação de múltiplos objetos
 
+### ex002 - Conta Bancária
+Sistema básico de conta bancária demonstrando operações fundamentais. Implementa:
+- Geração automática de IDs únicos com UUID
+- Operações bancárias (depósito e saque)
+- Validação de saldo
+- Método `__str__` para representação de objetos
+- Parâmetros opcionais com valores padrão
+
+**Conceitos abordados:**
+- Uso do módulo `uuid` para identificadores únicos
+- Métodos especiais (`__init__`, `__str__`)
+- Encapsulamento de lógica de negócio
+- Validação de operações
+- Formatação de valores monetários
+
 ## 🚀 Como Usar
 
 1. Clone este repositório:
@@ -64,6 +79,9 @@ python-oop-exercises/
 │
 ├── ex001/
 │   └── ex001.py
+│
+├── ex002/
+│   └── ex002.py
 │
 └── (outros exercícios serão adicionados)
 ```
