@@ -134,6 +134,76 @@ Simulação de uma caneta colorida com estados e funcionalidades. Implementa:
 - Uso de valor padrão em parâmetros
 - Integração com `rich` para cores
 
+### ex010 - Polígonos (Classes Abstratas)
+Sistema de cálculo de perímetro e área para diferentes polígonos. Implementa:
+- Classe abstrata `Poligono` com métodos abstratos
+- Classe `Quadrado` com cálculos de perímetro e área
+- Classe `Circulo` com cálculos de circunferência e área
+- Estrutura modularizada com separação de responsabilidades
+
+**Conceitos abordados:**
+- Classes abstratas e métodos abstratos (`ABC`, `@abstractmethod`)
+- Herança de classes abstratas
+- Implementação de contratos de interface
+- Atributos de classe
+- Modularização de código
+
+### ex011 - Cafeteria (Template Method)
+Simulação de uma máquina de café com diferentes bebidas quentes. Implementa:
+- Classe abstrata `BebidaQuente` com template method
+- Diferentes tipos de bebidas: Café, Chá, Leite
+- Processo padrão de preparação (fervir água, misturar, servir)
+- Customização por subclasses
+
+**Conceitos abordados:**
+- Padrão Template Method
+- Métodos concretos e abstratos em uma classe abstrata
+- Polimorfismo em ação
+- Reutilização de código comum
+- Modularização com múltiplos arquivos
+
+### ex012 - Transportes (Frete)
+Sistema de cálculo de frete para diferentes tipos de transporte. Implementa:
+- Classe abstrata `Transporte` com método abstrato `calc_frete()`
+- Diferentes transportes: Moto, Caminhão, Drone
+- Validações específicas por tipo (distância mínima/máxima)
+- Cálculo de frete com fatores diferentes
+
+**Conceitos abordados:**
+- Validação de restrições por tipo
+- Tratamento de exceções (`ValueError`)
+- Fatores e cálculos específicos
+- Padrão polimórfico
+- Modularização com separação de classes
+
+### ex013 - Funcionários (Polimorfismo)
+Sistema de cálculo de salários para diferentes tipos de funcionários. Implementa:
+- Classe abstrata `Funcionario` com método `analisar_sal()`
+- Tipos: Horista (calcula por horas) e Mensalista
+- Validação de salário mínimo
+- Constantes de classe (sal_min, inss)
+
+**Conceitos abordados:**
+- Polimorfismo em cálculos de salário
+- Atributos com valores padrão
+- Análise de dados (comparação com mínimo)
+- Herança com inicialização diferente
+- Métodos concretos na classe abstrata
+
+### ex014 - RPG (Sistema de Batalha)
+Sistema de batalha para um RPG com diferentes tipos de personagens. Implementa:
+- Classe abstrata `Personagem` com métodos de ataque e cura
+- Tipos: Guerreiro (cura 10 pontos) e Mago (cura 5 pontos)
+- Sistema de dano e vida
+- Interação entre personagens (atacar, receber dano, curar)
+
+**Conceitos abordados:**
+- Simulação de comportamentos interativos
+- Polimorfismo em métodos de cura
+- Gestão de estado (vida)
+- Métodos que afetam outros objetos
+- Modularização de lógica de jogo
+
 ## 🚀 Como Usar
 
 1. Clone este repositório:
@@ -143,12 +213,19 @@ git clone https://github.com/OYanEnrique/python-oop-exercises.git
 
 2. Navegue até o diretório do exercício desejado:
 ```bash
-cd python-oop-exercises/ex001
+cd python-oop-exercises/exercises/ex001
 ```
 
 3. Execute o arquivo Python:
+
+Para exercícios simples (ex001-ex009):
 ```bash
-python ex001.py
+python ex00X.py
+```
+
+Para exercícios modularizados (ex010+):
+```bash
+python __main__.py
 ```
 
 ## 📋 Pré-requisitos
@@ -167,32 +244,67 @@ python-oop-exercises/
 │
 ├── README.md
 │
-├── ex001/
-│   └── ex001.py
+├── exercises/
+│   ├── ex001/
+│   │   └── ex001.py
+│   │
+│   ├── ex002/
+│   │   └── ex002.py
+│   │
+│   ├── ex003/
+│   │   └── ex003.py
+│   │
+│   ├── ex004/
+│   │   └── ex004.py
+│   │
+│   ├── ex005/
+│   │   └── ex005.py
+│   │
+│   ├── ex006/
+│   │   └── ex006.py
+│   │
+│   ├── ex007/
+│   │   └── ex007.py
+│   │
+│   ├── ex008/
+│   │   └── ex008.py
+│   │
+│   ├── ex009/
+│   │   └── ex009.py
+│   │
+│   ├── ex010/
+│   │   ├── __main__.py
+│   │   ├── poligono.py
+│   │   ├── quadrado.py
+│   │   └── circulo.py
+│   │
+│   ├── ex011/
+│   │   ├── __main__.py
+│   │   ├── bebida_quente.py
+│   │   ├── cafe.py
+│   │   ├── cha.py
+│   │   └── leite.py
+│   │
+│   ├── ex012/
+│   │   ├── __main__.py
+│   │   ├── transporte.py
+│   │   ├── moto.py
+│   │   ├── caminhao.py
+│   │   └── drone.py
+│   │
+│   ├── ex013/
+│   │   ├── __main__.py
+│   │   ├── funcionario.py
+│   │   ├── horista.py
+│   │   └── mensalista.py
+│   │
+│   └── ex014/
+│       ├── __main__.py
+│       ├── personagem.py
+│       ├── guerreiro.py
+│       └── mago.py
 │
-├── ex002/
-│   └── ex002.py
-│
-├── ex003/
-│   └── ex003.py
-│
-├── ex004/
-│   └── ex004.py
-│
-├── ex005/
-│   └── ex005.py
-│
-├── ex006/
-│   └── ex006.py
-│
-├── ex007/
-│   └── ex007.py
-│
-├── ex008/
-│   └── ex008.py
-│
-└── ex009/
-    └── ex009.py
+└── LICENSE
 ```
 
 ## 🤝 Contribuindo
